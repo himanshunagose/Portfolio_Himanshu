@@ -1,16 +1,36 @@
-# portfolio_site
+# 🚀 Flutter Portfolio Website
 
-A new Flutter project.
+A modern, fully responsive Flutter Web Portfolio designed for showcasing your skills, projects, experience, and personal branding.  
+This portfolio supports **Web + Mobile responsiveness** and is optimized for **Vercel hosting with CI/CD**.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 🌐 Live Demo
+(Add your Vercel URL here)
 
-A few resources to get you started if this is your first Flutter project:
+---
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## ✨ Features
+- ⚡ Flutter Web + Mobile responsive
+- 🎨 Modern UI with smooth animations
+- 🌙 Dark / Light mode toggle
+- 🖱️ Custom interactive cursor for web
+- 💼 Projects showcase with hover effects
+- 🧩 Experience timeline
+- 🧑‍💻 Skills & tools section
+- 📫 Contact section (form/button)
+- 🌍 SEO optimized for Flutter Web
+- 🚀 CI/CD with Vercel
+- 🧱 Clean and modular architecture
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## 📦 Tech Stack
+- Flutter (Web & Mobile)
+- Dart
+- Vercel (Hosting + CI/CD)
+- GitHub
+- ResponsiveBuilder / LayoutBuilder
+
+---
+ 
