@@ -6,7 +6,7 @@ This portfolio supports **Web + Mobile responsiveness** and is optimized for **V
 ---
 
 ## 🌐 Live Demo
-(Add your Vercel URL here)
+https://himanshunagose-portfolio.netlify.app/
 
 ---
 
