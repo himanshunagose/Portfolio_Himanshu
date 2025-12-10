@@ -72,7 +72,8 @@ class _HeroSectionState extends State<HeroSection> {
 
                           /// ROLE TEXT
                           Text(
-                            'Flutter Engineer · Product Designer',
+                            // 'Flutter Engineer · Product Designer',
+                            'Engineer · Product Designer',
                             style: Theme.of(context).textTheme.labelLarge?.copyWith(
                               color: isDark ? Colors.white70 : Colors.black54,
                               fontSize: 16,
