@@ -12,7 +12,7 @@ class PortfolioApp extends StatelessWidget {
   const PortfolioApp({super.key});
 
   @override
-  Widget build(BuildContext context) {
+ /* Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => ThemeController()),
@@ -42,6 +42,44 @@ class PortfolioApp extends StatelessWidget {
         },
       ),
     );
+  }*/
+  Widget build(BuildContext context) {
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => ThemeController()),
+        ChangeNotifierProvider(create: (_) => CursorController()),
+      ],
+      child: Consumer<ThemeController>(
+        builder: (_, themeController, __) {
+          return MaterialApp(
+            title: 'Himanshu · Flutter Portfolio',
+            debugShowCheckedModeBanner: false,
+            theme: AppTheme.light(),
+            darkTheme: AppTheme.dark(),
+            themeMode: themeController.mode,
+
+            builder: (context, child) {
+              return MouseRegion(
+                cursor: SystemMouseCursors.basic,   // 👈 GLOBAL CURSOR HERE
+                child: CursorOverlay(
+                  child: GradientBackground(
+                    child: child ?? const SizedBox.shrink(),
+                  ),
+                ),
+              );
+            },
+
+            scrollBehavior: const ScrollBehavior().copyWith(
+              physics: const BouncingScrollPhysics(),
+            ),
+            onGenerateRoute: AppRouter.onGenerateRoute,
+            initialRoute: '/',
+          );
+        },
+      ),
+    );
   }
+
 }
+
 

@@ -24,10 +24,8 @@ class FooterSection extends StatelessWidget {
             alignment: WrapAlignment.center,
             spacing: 18,
             children: const [
-              _FooterLink(label: 'Behance', url: 'https://behance.net/placeholder'),
-              _FooterLink(label: 'Dribbble', url: 'https://dribbble.com/placeholder'),
-              _FooterLink(label: 'GitHub', url: 'https://github.com/placeholder'),
-              _FooterLink(label: 'LinkedIn', url: 'https://linkedin.com/in/placeholder'),
+              _FooterLink(label: 'GitHub', url: 'https://github.com/himanshunagose'),
+              _FooterLink(label: 'LinkedIn', url: 'https://www.linkedin.com/in/himanshu-nagose-474378240/'),
             ],
           ),
         ],

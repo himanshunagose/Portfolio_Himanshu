@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:shimmer/shimmer.dart';
 
 import '../../../core/widgets/cursor_region.dart';
 import '../../../data/mock_data.dart';
@@ -14,7 +15,7 @@ class ProjectsSection extends StatelessWidget {
 
   final ValueChanged<PortfolioProject> onProjectTap;
 
-  @override
+/*  @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 80),
@@ -54,7 +55,64 @@ class ProjectsSection extends StatelessWidget {
         ],
       ),
     );
+  }*/
+
+  Widget build(BuildContext context) {
+    final isLoading = false; // Replace with your real loading state
+
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 80),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const SectionTitle(
+            title: 'Selected Projects',
+            subtitle: 'Proof of craft',
+          ),
+          const SizedBox(height: 32),
+
+          LayoutBuilder(
+            builder: (context, constraints) {
+              final width = constraints.maxWidth;
+              final crossAxisCount = width > 1200
+                  ? 3
+                  : width > 900
+                  ? 2
+                  : 1;
+
+              final itemWidth =
+                  (width - (crossAxisCount - 1) * 24) / crossAxisCount;
+
+              return Wrap(
+                spacing: 24,
+                runSpacing: 24,
+                children: [
+                  if (isLoading)
+                    ...List.generate(
+                      6, // number of shimmer items
+                          (_) => SizedBox(
+                        width: itemWidth,
+                        child: _ShimmerProjectCard(),
+                      ),
+                    )
+                  else
+                    for (final project in MockData.projects)
+                      SizedBox(
+                        width: itemWidth,
+                        child: _ProjectCard(
+                          project: project,
+                          onTap: () => onProjectTap(project),
+                        ),
+                      ),
+                ],
+              );
+            },
+          ),
+        ],
+      ),
+    );
   }
+
 }
 
 class _ProjectCard extends StatefulWidget {
@@ -173,3 +231,48 @@ class _ProjectCardState extends State<_ProjectCard> {
   }
 }
 
+class _ShimmerProjectCard extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Shimmer.fromColors(
+      baseColor: Colors.grey.shade300,
+      highlightColor: Colors.grey.shade100,
+      child: Container(
+        padding: const EdgeInsets.all(16),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(12),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            // Image placeholder
+            Container(
+              height: 180,
+              decoration: BoxDecoration(
+                color: Colors.grey.shade300,
+                borderRadius: BorderRadius.circular(8),
+              ),
+            ),
+            const SizedBox(height: 12),
+
+            // Title placeholder
+            Container(
+              height: 16,
+              width: 150,
+              color: Colors.grey.shade300,
+            ),
+            const SizedBox(height: 8),
+
+            // Subtitle placeholder
+            Container(
+              height: 14,
+              width: 80,
+              color: Colors.grey.shade300,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}

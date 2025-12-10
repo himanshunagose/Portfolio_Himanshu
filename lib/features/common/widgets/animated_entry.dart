@@ -20,3 +20,4 @@ class AnimatedEntry extends StatelessWidget {
   }
 }
 
+

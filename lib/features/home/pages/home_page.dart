@@ -21,7 +21,7 @@ enum HomeSection {
   skills('Skills'),
   experience('Experience'),
   projects('Projects'),
-  testimonials('Testimonials'),
+  // testimonials('Testimonials'),
   contact('Contact');
 
   const HomeSection(this.label);
@@ -76,7 +76,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   Future<void> _openResume() async {
-    final uri = Uri.parse('https://example.com/himanshu-resume.pdf');
+    final uri = Uri.parse('https://drive.google.com/file/d/1TomI1q1jFjcTKwc-xvXLasKR_XnC1-Zu/view?usp=drive_link');
     if (!await launchUrl(uri, mode: LaunchMode.externalApplication)) {
       if (!mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
@@ -121,7 +121,7 @@ class _HomePageState extends State<HomePage> {
                         key: sectionKeys[HomeSection.projects],
                         onProjectTap: _openProjectDetails,
                       ),
-                      TestimonialsSection(key: sectionKeys[HomeSection.testimonials]),
+                      // TestimonialsSection(key: sectionKeys[HomeSection.testimonials]),
                       ContactSection(key: sectionKeys[HomeSection.contact]),
                       const FooterSection(),
                     ],
