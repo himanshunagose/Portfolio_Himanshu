@@ -1,7 +1,10 @@
 #!/bin/bash
 
-# Download Flutter SDK
-git clone https://github.com/flutter/flutter.git -b stable
+# If Flutter already exists, skip cloning
+if [ ! -d "flutter" ]; then
+  git clone https://github.com/flutter/flutter.git -b stable
+fi
+
 export PATH="$PATH:`pwd`/flutter/bin"
 
 flutter doctor

@@ -72,8 +72,8 @@ class _HeroSectionState extends State<HeroSection> {
 
                           /// ROLE TEXT
                           Text(
-                            // 'Flutter Engineer · Product Designer',
-                            'Engineer · Product Designer',
+                            'Flutter Engineer · Product Designer',
+                            // 'Engineer · Product Designer',
                             style: Theme.of(context).textTheme.labelLarge?.copyWith(
                               color: isDark ? Colors.white70 : Colors.black54,
                               fontSize: 16,
@@ -172,7 +172,7 @@ class _HeroSectionState extends State<HeroSection> {
                                 children: [
                                   Positioned.fill(
                                     child:
-                                    Lottie.asset('lottie/hello1.json')
+                                    Lottie.asset('assets/lottie/hello1.json')
                                   ),
                                   Align(
                                     alignment: Alignment.bottomCenter,
@@ -230,7 +230,7 @@ class _HeroSectionState extends State<HeroSection> {
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(36),
                       child:
-                      Lottie.asset('lottie/hello1.json'),
+                      Lottie.asset('assets/lottie/hello1.json'),
                     ),
                   ).animate().fadeIn(duration: 600.ms),
                   const SizedBox(height: 32),
