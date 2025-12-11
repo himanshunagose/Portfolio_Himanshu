@@ -3,7 +3,6 @@ import 'package:http/http.dart' as http;
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../common/widgets/section_title.dart';
-import 'dart:html' as html;
 
 class ContactSection extends StatefulWidget {
   const ContactSection({super.key});

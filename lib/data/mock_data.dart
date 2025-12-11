@@ -140,7 +140,7 @@ class MockData {
     Experience(
       company: 'Innavativebiz Technology',
       role: 'Flutter Developer',
-      period: '2021 - Present', // You can add the actual dates, e.g., '2022 — Present'
+      period: '2024 - Present', // You can add the actual dates, e.g., '2022 — Present'
       description: 'Worked on UI development for multiple Flutter applications, integrating REST APIs and creating reusable widgets for scalable solutions.',
       highlights: [
         'Developed clean and responsive UIs across multiple Flutter applications',
