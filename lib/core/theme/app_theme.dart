@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../constants/app_colors.dart';
 
+const double defaultPadding=20.0;
 class AppTheme {
   static ThemeData light() => _base(
         brightness: Brightness.light,

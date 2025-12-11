@@ -172,7 +172,8 @@ class _HeroSectionState extends State<HeroSection> {
                                 children: [
                                   Positioned.fill(
                                     child:
-                                    Lottie.asset('assets/assets/images/hello1.json')
+                                    // Lottie.asset('assets/assets/images/hello1.json')
+                                    Lottie.asset('assets/images/hello1.json')
                                   ),
                                   Align(
                                     alignment: Alignment.bottomCenter,
@@ -230,7 +231,8 @@ class _HeroSectionState extends State<HeroSection> {
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(36),
                       child:
-                      Lottie.asset('assets/assets/images/hello1.json'),
+                      // Lottie.asset('assets/assets/images/hello1.json'),
+                      Lottie.asset('assets/images/hello1.json'),
                     ),
                   ).animate().fadeIn(duration: 600.ms),
                   const SizedBox(height: 32),
