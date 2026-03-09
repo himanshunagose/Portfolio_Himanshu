@@ -176,34 +176,9 @@ class MockData {
     ),*/
   ];
 
+/*
   static const projects = [
-   /* PortfolioProject(
-      title: 'Neobit Banking OS',
-      description:
-          'A modern banking platform with adaptive dashboards, biometric auth, and AI-powered insights.',
-      image: 'assets/images/project_finance.png',
-      link: 'https://example.com/neobit',
-      tags: ['Flutter Web', 'Firebase', 'Riverpod'],
-      badges: ['Fintech', 'Enterprise'],
-    ),
-    PortfolioProject(
-      title: 'PulseCare Telehealth',
-      description:
-          'HIPAA compliant telehealth suite with ultra-low latency video calls and wearable integrations.',
-      image: 'assets/images/project_iot.png',
-      link: 'https://example.com/pulsecare',
-      tags: ['Flutter', 'BLE', 'Realtime'],
-      badges: ['Healthcare', 'IoT'],
-    ),
-    PortfolioProject(
-      title: 'Orbit Collab',
-      description:
-          'Cross-platform productivity OS with synced docs, spaces, and AI copilots for remote teams.',
-      image: 'assets/images/project_chat.png',
-      link: 'https://example.com/orbit',
-      tags: ['Flutter Desktop', 'WebSockets'],
-      badges: ['SaaS', 'Collaboration'],
-    ),*/
+
     PortfolioProject(
       title: 'Mera Agent App',
       description:
@@ -235,7 +210,43 @@ class MockData {
     ),
 
   ];
+*/
 
+  static const projects = [
+    // Mera Agent App - Available on both stores
+    PortfolioProject(
+      title: 'Mera Agent App',
+      description:
+      'Real estate app for brokers to build a strong community and simplify property matching. Improved load speed by 30%, with GetX & Provider for efficient state management.',
+      image: 'assets/images/project_real_estate.png',
+      playStoreLink: 'https://play.google.com/store/apps/details?id=com.My_agent.mera_agent',
+      appStoreLink: 'https://apps.apple.com/in/app/mera-agent/id6757910738', // Add your actual App Store link
+      tags: ['Flutter', 'Dart', 'Firebase', 'REST APIs', 'Google Maps'],
+      badges: ['Real Estate', 'Mobile App', 'Live on Stores'],
+    ),
+
+    // Grocery Delivery App - GitHub only
+    PortfolioProject(
+      title: 'Grocery Delivery App',
+      description:
+      'Full-stack grocery app with authentication, cart, and payment features. Optimized load speed by 30%, using GetX for state management and Provider for cart management.',
+      image: 'assets/images/project_grocery.png',
+      githubLink: 'https://github.com/himanshunagose/Food_Grocery-app',
+      tags: ['Flutter', 'Dart', 'GetX', 'Provider'],
+      badges: ['E-commerce', 'Mobile App'],
+    ),
+
+    // Skill Connect Pro - GitHub only
+    PortfolioProject(
+      title: 'Skill Connect Pro',
+      description:
+      'Front-end Flutter project for skill management. UI implemented with Provider for state management and SharedPreferences for local storage. Purely front-end focused.',
+      image: 'assets/images/project_skills.png',
+      githubLink: 'https://github.com/himanshunagose/Skills_connect_to',
+      tags: ['Flutter', 'Dart', 'Provider', 'SharedPreferences'],
+      badges: ['Front-end', 'Portfolio Project'],
+    ),
+  ];
   static const testimonials = [
     Testimonial(
       name: '',
