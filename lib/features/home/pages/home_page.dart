@@ -76,7 +76,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   Future<void> _openResume() async {
-    final uri = Uri.parse('https://drive.google.com/file/d/1RRxgpW5uKss4QgQ2eF92mWaZHhHiiiGK/view?usp=sharing');
+    final uri = Uri.parse('https://drive.google.com/file/d/1SMf9by9W6pzWkyOj28Bf68mZtlO2GHMS/view?usp=drive_link');
     if (!await launchUrl(uri, mode: LaunchMode.externalApplication)) {
       if (!mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(

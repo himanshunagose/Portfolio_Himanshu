@@ -246,6 +246,15 @@ class MockData {
       tags: ['Flutter', 'Dart', 'Provider', 'SharedPreferences'],
       badges: ['Front-end', 'Portfolio Project'],
     ),
+    PortfolioProject(
+      title: 'Smart Attendance App',
+      description:
+      'Front-end Flutter project for skill management. UI implemented with Provider for state management and SharedPreferences for local storage. Purely front-end focused.Built GPS-based attendance validation with office radius verification, integrated Google Maps for location tracking, developed role-based dashboards for Employees and Admins, and used Provider for state management with scalable architecture.',
+      image: 'assets/images/smart_attendence.png',
+      githubLink: 'https://github.com/himanshunagose/smart_attendance',
+      tags: ['Flutter', 'Dart', 'Google Maps Flutter', 'Geolocator', 'Provider', 'Sqlite'],
+      badges: ['Front-end', 'Portfolio Project'],
+    ),
   ];
   static const testimonials = [
     Testimonial(

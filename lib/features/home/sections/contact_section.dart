@@ -88,21 +88,26 @@ class _ContactSectionState extends State<ContactSection> {
       print(response.statusCode);
       if (response.statusCode == 200) {
         clearField();
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Message sent! I will get back shortly.')),
-        );
         formKey.currentState?.reset();
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('Message sent! I will get back shortly1.')),
+        );
       } else {
         clearField();
+        formKey.currentState?.reset();
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Message sent! I will get back shortly.')),
+          const SnackBar(content: Text('Message sent! I will get back shortly2.')),
         );
       }
     } catch (_) {
       if (!mounted) return;
+        formKey.currentState?.reset();
       clearField();
+      setState(() {
+
+      });
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Message sent! I will get back shortly.')),
+        const SnackBar(content: Text('Message sent! I will get back shortly3.')),
       );
     } finally {
       if (mounted) setState(() => sending = false);
